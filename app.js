@@ -3,9 +3,6 @@ const txtInput = document.querySelector("#txt-input");
 const txtOutput = document.querySelector("#output-txt");
 const baseUrl = "https://api.funtranslations.com/translate/minion.json?text="
 
-txtInput.addEventListener("change", onChangeHandler);
-btnSubmit.addEventListener("click", onClickHandler)
-
 const getTranslation = (inpText) => {
     const url = baseUrl + inpText;
 
@@ -27,5 +24,9 @@ const onClickHandler = () => {
             alert("Something wrong with server, try again after sometime!");
         });
 }
+
+
+txtInput.addEventListener("change", onChangeHandler);
+btnSubmit.addEventListener("click", onClickHandler)
 
 // "https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json?text="
